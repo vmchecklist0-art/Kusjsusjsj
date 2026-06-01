@@ -1715,36 +1715,36 @@ const trackablePages = ["route-list", "deliveries", "rooster", "plano-vm", "gall
     }
   }
 
-  const getPageBreadcrumbs = (): { parent?: { label: string; icon: React.ElementType }; current: string } => {
+  const getPageBreadcrumbs = (): { parent?: { label: string }; current: string } => {
     switch (currentPage) {
       case "route-list":
-        return { parent: { label: contentText.breadcrumb.vendingMachine, icon: Package }, current: contentText.breadcrumb.routeList }
+        return { parent: { label: "Operations" }, current: contentText.breadcrumb.routeList }
       case "custom":
-        return { parent: { label: contentText.breadcrumb.vendingMachine, icon: Package }, current: contentText.breadcrumb.custom }
+        return { parent: { label: "Operations" }, current: contentText.breadcrumb.custom }
       case "deliveries":
-        return { parent: { label: contentText.breadcrumb.vendingMachine, icon: Package }, current: contentText.breadcrumb.location }
+        return { parent: { label: "Operations" }, current: contentText.breadcrumb.location }
       case "rooster":
-        return { parent: { label: contentText.breadcrumb.schedule, icon: Users }, current: contentText.breadcrumb.rooster }
+        return { parent: { label: contentText.breadcrumb.schedule }, current: contentText.breadcrumb.rooster }
       case "settings":
         return { current: contentText.breadcrumb.settings }
       case "settings-profile":
-        return { parent: { label: contentText.breadcrumb.settings, icon: Cog }, current: contentText.breadcrumb.profile }
+        return { parent: { label: contentText.breadcrumb.settings }, current: contentText.breadcrumb.profile }
       case "settings-notifications":
-        return { parent: { label: contentText.breadcrumb.settings, icon: Cog }, current: contentText.breadcrumb.notifications }
+        return { parent: { label: contentText.breadcrumb.settings }, current: contentText.breadcrumb.notifications }
       case "settings-appearance-font":
-        return { parent: { label: contentText.breadcrumb.settings, icon: Cog }, current: contentText.breadcrumb.font }
+        return { parent: { label: contentText.breadcrumb.settings }, current: contentText.breadcrumb.font }
       case "settings-route-colors":
-        return { parent: { label: contentText.breadcrumb.settings, icon: Cog }, current: contentText.breadcrumb.routeColours }
+        return { parent: { label: contentText.breadcrumb.settings }, current: contentText.breadcrumb.routeColours }
       case "settings-storage":
-        return { parent: { label: contentText.breadcrumb.settings, icon: Cog }, current: contentText.breadcrumb.storage }
+        return { parent: { label: contentText.breadcrumb.settings }, current: contentText.breadcrumb.storage }
       case "settings-security":
-        return { parent: { label: contentText.breadcrumb.settings, icon: Cog }, current: contentText.breadcrumb.security }
+        return { parent: { label: contentText.breadcrumb.settings }, current: contentText.breadcrumb.security }
       case "plano-vm":
-        return { parent: { label: contentText.breadcrumb.gallery, icon: Images }, current: "Plano VM" }
+        return { parent: { label: contentText.breadcrumb.gallery }, current: "Plano VM" }
       case "gallery-album":
-        return { parent: { label: contentText.breadcrumb.gallery, icon: Images }, current: contentText.breadcrumb.album }
+        return { parent: { label: contentText.breadcrumb.gallery }, current: contentText.breadcrumb.album }
       case "gallery-site-images":
-        return { parent: { label: contentText.breadcrumb.gallery, icon: Images }, current: contentText.breadcrumb.siteImages }
+        return { parent: { label: contentText.breadcrumb.gallery }, current: contentText.breadcrumb.siteImages }
       case "home":
       default:
         return { current: contentText.breadcrumb.home }
@@ -1794,7 +1794,6 @@ const trackablePages = ["route-list", "deliveries", "rooster", "plano-vm", "gall
                       key={`parent-${currentPage}`}
                       className="hidden md:flex items-center gap-1 text-muted-foreground animate-in fade-in slide-in-from-left-2 duration-200"
                     >
-                      <parent.icon className="size-3.5 shrink-0" />
                       <BreadcrumbPage className="truncate max-w-[120px] sm:max-w-[200px] md:max-w-none font-medium">
                         {parent.label}
                       </BreadcrumbPage>
