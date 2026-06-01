@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from "react"
 import QrScanner from "qr-scanner"
-import { Plus, Trash2, QrCode, ExternalLink, Pencil, Link2, ImageUp, X, CheckCircle2, Loader2, AlertCircle, Check, Camera, ChevronRight } from "lucide-react"
+import { Plus, Trash2, QrCode, ExternalLink, Pencil, Link2, ImageUp, X, CircleCheck as CheckCircle2, Loader as Loader2, CircleAlert as AlertCircle, Check, Camera, ChevronRight } from "lucide-react"
 import { toast } from "sonner"
 import "lightgallery/css/lightgallery.css"
 import "lightgallery/css/lg-zoom.css"
 import "lightgallery/css/lg-thumbnail.css"
-import noImageSrc from "../../icon/noimage.jpeg"
+const noImageSrc = "https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=100"
 import {
   Dialog,
   DialogContent,
