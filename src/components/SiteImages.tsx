@@ -23,7 +23,7 @@ interface RouteRecord {
   code: string
   shift: string
   color?: string | null
-  delivery_points: unknown[]
+  deliveryPoints: unknown[]
 }
 
 type LocationImagePoint = DeliveryPoint & {
@@ -63,8 +63,8 @@ export function SiteImages() {
         }
 
         const allPoints: LocationImagePoint[] = json.data.flatMap((route: RouteRecord) => {
-          if (!Array.isArray(route.delivery_points)) return []
-          return route.delivery_points
+          if (!Array.isArray(route.deliveryPoints)) return []
+          return route.deliveryPoints
             .filter((point): point is DeliveryPoint => point !== null && typeof point === "object")
             .map((point) => ({
               ...point,
