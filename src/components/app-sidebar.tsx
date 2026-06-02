@@ -194,7 +194,7 @@ export function AppSidebar({
           <SidebarHeader className="p-0 shrink-0">
             <div className="relative overflow-hidden h-[100px] rounded-t-[18px]">
               <img
-                src=""
+                src="/IMG_0011.jpeg"
                 alt=""
                 aria-hidden="true"
                 className={`pointer-events-none absolute inset-0 h-full w-full object-cover ${
@@ -390,7 +390,7 @@ export function AppSidebar({
             {/* FM Logo */}
             <div className="mx-auto flex items-center justify-center rounded-xl p-1 transition-colors duration-150">
               <img
-                src=""
+                src="/familymtlogo.png"
                 alt="FM logo"
                 className="h-[72px] w-[72px] shrink-0 object-contain"
               />
